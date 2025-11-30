@@ -44,7 +44,7 @@ export const Footer = () => {
           className={`${buttonVariants({ size: "lg" })} text-white bg-primary/5 hover:bg-primary/8 px-12`}
           href={socialLinks.resume}
         >
-          Resume
+          Résumé
         </Link>
 
         <div ref={socialIconsRef} className="flex items-center gap-4 justify-center w-full">

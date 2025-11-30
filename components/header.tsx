@@ -142,10 +142,10 @@ export const Header = () => {
           }`}>
             <Link
               href="https://cs.uwatering.com/#calvin-lee.ca?nav=prev"
-              className={`transition-colors text-xl ${
+              className={`transition-colors text-xl font-medium ${
                 isOverWhiteSection 
-                  ? "text-gray-600 hover:text-gray-900" 
-                  : "text-white/80 hover:text-white"
+                  ? "text-gray-900 hover:text-gray-950" 
+                  : "text-white hover:text-white"
               }`}
               aria-label="Previous in CS Webring"
             >
@@ -166,10 +166,10 @@ export const Header = () => {
             </Link>
             <Link
               href="https://cs.uwatering.com/#calvin-lee.ca?nav=next"
-              className={`transition-colors text-xl ${
+              className={`transition-colors text-xl font-medium ${
                 isOverWhiteSection 
-                  ? "text-gray-600 hover:text-gray-900" 
-                  : "text-white/80 hover:text-white"
+                  ? "text-gray-900 hover:text-gray-950" 
+                  : "text-white hover:text-white"
               }`}
               aria-label="Next in CS Webring"
             >
@@ -201,10 +201,10 @@ export const Header = () => {
                     window.scrollTo({ top: 0, behavior: 'smooth' })
                   })
                 }}
-                className={`font-serif italic transition-colors text-sm md:text-base pb-1 relative ${
+                className={`font-serif transition-colors text-base md:text-lg font-medium pb-1 relative ${
                   isOverWhiteSection
-                    ? "text-gray-700 hover:text-gray-900"
-                    : "text-white/90 hover:text-white"
+                    ? "text-gray-900 hover:text-gray-950"
+                    : "text-white hover:text-white"
                 }`}
               >
                 Home
@@ -249,10 +249,10 @@ export const Header = () => {
                     })
                   }
                 }}
-                className={`font-serif italic transition-colors text-sm md:text-base pb-1 relative ${
+                className={`font-serif transition-colors text-base md:text-lg font-medium pb-1 relative ${
                   isOverWhiteSection
-                    ? "text-gray-600 hover:text-gray-900"
-                    : "text-white/80 hover:text-white"
+                    ? "text-gray-900 hover:text-gray-950"
+                    : "text-white hover:text-white"
                 }`}
               >
                 About Me
@@ -297,10 +297,10 @@ export const Header = () => {
                     })
                   }
                 }}
-                className={`font-serif italic transition-colors text-sm md:text-base pb-1 relative ${
+                className={`font-serif transition-colors text-base md:text-lg font-medium pb-1 relative ${
                   isOverWhiteSection
-                    ? "text-gray-600 hover:text-gray-900"
-                    : "text-white/80 hover:text-white"
+                    ? "text-gray-900 hover:text-gray-950"
+                    : "text-white hover:text-white"
                 }`}
               >
                 Experience
@@ -335,14 +335,14 @@ export const Header = () => {
             <Link
               target="_blank"
               href={socialLinks.resume}
-              className={`px-4 py-2 rounded-lg transition-all backdrop-blur-sm font-serif italic text-sm md:text-base ${
+              className={`px-4 py-2 rounded-lg transition-all backdrop-blur-sm font-serif text-base md:text-lg font-medium ${
                 isOverWhiteSection
-                  ? "border border-gray-300/50 hover:border-gray-400/50 bg-transparent text-gray-700 hover:text-gray-900"
+                  ? "border border-gray-300/50 hover:border-gray-400/50 bg-transparent text-gray-900 hover:text-gray-950"
                   : "border border-white/20 hover:border-white/40 bg-white/10 text-white hover:text-white"
               }`}
-              aria-label="Resume"
+              aria-label="Résumé"
             >
-              Resume
+              Résumé
             </Link>
             <button
               onClick={handleEmailClick}

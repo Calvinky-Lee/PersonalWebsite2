@@ -31,7 +31,7 @@ export const MainContent = () => {
             
             <div className="space-y-12 relative z-10 flex-1 flex flex-col">
               <div className="text-center">
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif italic text-gray-900 select-text mb-2">
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-gray-900 select-text mb-2">
                   About Me
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
@@ -50,7 +50,7 @@ export const MainContent = () => {
                 </div>
                 <div className="flex-1 min-w-0 space-y-8">
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-serif italic text-gray-900 mb-5 select-text">
+                    <h3 className="text-3xl md:text-4xl font-serif text-gray-900 mb-5 select-text">
                       Hi I&apos;m Calvin Lee!
                     </h3>
                     <p className="text-lg md:text-xl leading-loose text-gray-700 font-serif select-text">
@@ -63,7 +63,7 @@ export const MainContent = () => {
                     </p>
                   </div>
                   <div className="pt-3">
-                    <p className="text-lg md:text-xl leading-loose text-gray-600 font-serif italic select-text">
+                    <p className="text-lg md:text-xl leading-loose text-gray-600 font-serif select-text">
                       Feel free to explore my website!
                     </p>
                   </div>
@@ -74,7 +74,7 @@ export const MainContent = () => {
 
           {/* Certifications Section */}
           <div className="flex-1 h-full flex flex-col">
-            <h2 className="text-3xl md:text-4xl font-serif italic text-center mb-8">Certifications</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-8">Certifications</h2>
             <div className="space-y-8 flex-1 flex flex-col justify-start">
               <div className="p-8 md:p-10 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow flex gap-6 items-start">
                 <div className="flex-shrink-0">
@@ -128,7 +128,7 @@ export const MainContent = () => {
 
         {/* Skills Section */}
         <div className="p-6 md:p-8 border-2 border-gray-300 rounded-3xl bg-gradient-to-br from-white to-gray-50 shadow-xl">
-          <h2 className="text-3xl md:text-4xl font-serif italic text-center mb-6">Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-center mb-6">Skills</h2>
           <div className="flex flex-nowrap gap-3 justify-center overflow-x-auto">
             {["Python", "SQL", "Javascript", "React", "Next.js", "TypeScript", "Tailwind", "Java", "HTML", "CSS", "Node", "Snowflake"].map((skill) => (
               <span
@@ -148,7 +148,7 @@ export const MainContent = () => {
             id="experiences"
             className="flex-1 space-y-8 scroll-mt-24 w-full"
           >
-            <h2 className="text-3xl md:text-4xl font-serif italic text-center mb-8">Experiences</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-8">Experiences</h2>
             <div className="relative">
               {/* Vertical Timeline Line */}
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
@@ -318,7 +318,7 @@ export const MainContent = () => {
             id="projects"
             className="flex-1 space-y-8 scroll-mt-24 w-full"
           >
-            <h2 className="text-3xl md:text-4xl font-serif italic text-center mb-8">Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-8">Projects</h2>
             <div className="space-y-8">
             <div className="p-8 md:p-10 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold mb-2">GooseGrade</h3>

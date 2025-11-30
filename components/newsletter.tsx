@@ -46,7 +46,7 @@ export const Newsletter = () => {
     <div className="flex overflow-hidden relative flex-col gap-4 justify-center items-center pt-10 w-full h-full short:lg:pt-10 pb-footer-safe-area 2xl:pt-footer-safe-area px-sides short:lg:gap-4 lg:gap-8">
       <div className="flex flex-col items-center gap-2">
         <motion.div layout="position" transition={{ duration: DURATION, ease: EASE_OUT }}>
-          <h1 className="font-serif text-[9rem] italic font-black tracking-wider short:lg:text-[12rem] sm:text-[12rem] lg:text-[16rem] text-foreground drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] leading-none">
+          <h1 className="font-serif text-[9rem] font-black tracking-wider short:lg:text-[12rem] sm:text-[12rem] lg:text-[16rem] text-foreground drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] leading-none">
             Calvin Lee
           </h1>
         </motion.div>
@@ -143,7 +143,7 @@ export const Newsletter = () => {
               }}
               className="relative flex min-h-0 flex-shrink overflow-hidden text-sm md:text-base max-h-[calc(70dvh-var(--footer-safe-area))] flex-col gap-8 text-center backdrop-blur-xl text-balance border-2 border-border/50 bg-primary/20 max-w-3xl text-foreground rounded-3xl ring-1 ring-offset-primary/10 ring-border/10 ring-offset-2 shadow-button"
             >
-              <article className="relative overflow-y-auto italic p-6 h-full [&_p]:my-4">
+              <article className="relative overflow-y-auto p-6 h-full [&_p]:my-4">
                 <p>
                   &quot;We stand at the forefront of a new era, where creativity meets technology to redefine
                   what&apos;s possible. Our mission is to empower individuals and businesses alike with groundbreaking
