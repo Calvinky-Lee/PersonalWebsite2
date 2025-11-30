@@ -53,50 +53,50 @@ export const Footer = () => {
             className={buttonVariants({ size: "icon-xl" })} 
             href={socialLinks.linkedin}
           >
-            <LinkedInLogoIcon className="size-6" />
-          </Link>
+          <LinkedInLogoIcon className="size-6" />
+        </Link>
 
-          <button
+        <button
             id="email-button"
-            className={`${buttonVariants({ size: "icon-xl" })} relative overflow-visible transition-transform ${
-              copied ? "scale-110" : ""
-            }`}
-            onClick={handleEmailClick}
-            aria-label="Copy email to clipboard"
-          >
-            {copied ? (
-              <>
-                <CheckIcon className="size-6" />
-                {/* Bubble animation rings */}
-                <span className="absolute inset-0 rounded-full bg-green-400/30 animate-ping" />
-                <span className="absolute inset-0 rounded-full bg-green-400/20 animate-pulse" />
-              </>
-            ) : (
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="size-6"
-              >
-                <rect x="2" y="4" width="20" height="16" rx="4" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-            )}
-          </button>
+          className={`${buttonVariants({ size: "icon-xl" })} relative overflow-visible transition-transform ${
+            copied ? "scale-110" : ""
+          }`}
+          onClick={handleEmailClick}
+          aria-label="Copy email to clipboard"
+        >
+          {copied ? (
+            <>
+              <CheckIcon className="size-6" />
+              {/* Bubble animation rings */}
+              <span className="absolute inset-0 rounded-full bg-green-400/30 animate-ping" />
+              <span className="absolute inset-0 rounded-full bg-green-400/20 animate-pulse" />
+            </>
+          ) : (
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="size-6"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="4" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          )}
+        </button>
 
           <Link 
             target="_blank" 
             className={buttonVariants({ size: "icon-xl" })} 
             href={socialLinks.github}
           >
-            <GitHubLogoIcon className="size-6" />
-          </Link>
-        </div>
+          <GitHubLogoIcon className="size-6" />
+        </Link>
+      </div>
       </div>
     </div>
   )

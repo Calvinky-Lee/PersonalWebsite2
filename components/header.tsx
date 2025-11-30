@@ -55,12 +55,11 @@ export const Header = () => {
       // The Experience button uses scrollIntoView with block: 'start', which accounts for scroll-mt-24 (96px)
       if (experiencesEl) {
         const experiencesTop = experiencesEl.offsetTop
-        // Activate when scroll position reaches where the button scrolls to
-        // scrollIntoView with block: 'start' scrolls to experiencesTop - scrollMargin (96px)
-        // Add a small buffer to activate slightly earlier for better UX
-        const scrollMargin = 96 // scroll-mt-24
-        const activationBuffer = 50 // Small buffer to activate slightly before exact position
-        if (scrollPosition >= experiencesTop - scrollMargin - activationBuffer) {
+        // Activate when viewport top actually reaches the experiences section
+        // Use viewportTop (scrollPosition + headerOffset) to ensure we're past the Skills section
+        // The scroll-mt-24 (96px) is already accounted for in the element's position
+        // Only activate when the viewport has actually reached the experiences section
+        if (viewportTop >= experiencesTop) {
           setActiveSection("experiences")
           return
         }

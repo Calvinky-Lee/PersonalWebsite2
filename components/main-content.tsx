@@ -144,12 +144,8 @@ export const MainContent = () => {
         {/* Experiences and Projects Side by Side */}
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Experiences Section */}
-        <motion.div
+        <div
             id="experiences"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
             className="flex-1 space-y-8 scroll-mt-24 w-full"
           >
             <h2 className="text-3xl md:text-4xl font-serif italic text-center mb-8">Experiences</h2>
@@ -315,15 +311,11 @@ export const MainContent = () => {
                 </div>
               </div>
             </div>
-        </motion.div>
+          </div>
 
           {/* Projects Section */}
-        <motion.div
+        <div
             id="projects"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
             className="flex-1 space-y-8 scroll-mt-24 w-full"
           >
             <h2 className="text-3xl md:text-4xl font-serif italic text-center mb-8">Projects</h2>
@@ -422,7 +414,7 @@ export const MainContent = () => {
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
         </div>
       </div>
     </section>
