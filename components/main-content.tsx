@@ -368,30 +368,6 @@ export const MainContent = () => {
               </div>
           </div>
             <div className="p-8 md:p-10 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-2">UW-2DO</h3>
-              <p className="text-gray-600 mb-4">
-                An all-in-one tasks organizer and chatbot tailored for UWaterloo students.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["JavaScript", "React", "HTML", "CSS", "Node"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <Link
-                href="https://github.com/zach3141592/UW-2Do"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-5 py-4 border border-gray-300 rounded-lg font-sans text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all tracking-wide"
-              >
-                View Project →
-              </Link>
-            </div>
-            <div className="p-8 md:p-10 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Personal Website</h3>
               <p className="text-gray-600 mb-4">My own personal website showcasing my work and experiences.</p>
               <div className="flex flex-wrap gap-2 mb-4">
