@@ -97,32 +97,6 @@ export const Footer = () => {
             <GitHubLogoIcon className="size-6" />
           </Link>
         </div>
-
-        <div className="flex items-center justify-center w-full" id="webring-container">
-        <Link
-          href="https://cs.uwatering.com/#calvin-lee.ca?nav=prev"
-          className="text-white/80 hover:text-white transition-colors text-xl"
-          aria-label="Previous in CS Webring"
-        >
-          ←
-        </Link>
-        <div className="w-2"></div>
-        <Link href="https://cs.uwatering.com/#calvin-lee.ca" target="_blank" aria-label="CS Webring" className="relative">
-          <img
-            src="https://cs.uwatering.com/icon.white.svg"
-            alt="CS Webring"
-            className="w-6 h-auto opacity-80 hover:opacity-100 transition-opacity"
-          />
-        </Link>
-        <div className="w-2"></div>
-        <Link
-          href="https://cs.uwatering.com/#calvin-lee.ca?nav=next"
-          className="text-white/80 hover:text-white transition-colors text-xl"
-          aria-label="Next in CS Webring"
-        >
-          →
-        </Link>
-      </div>
       </div>
     </div>
   )

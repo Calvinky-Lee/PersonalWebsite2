@@ -2,6 +2,7 @@
 
 import { Background } from "@/components/background"
 import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
 import { Newsletter } from "@/components/newsletter"
 import { MainContent } from "@/components/main-content"
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion"
@@ -24,7 +25,8 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="relative min-h-[200vh] bg-white">
-      <div className="absolute top-0 left-0 w-full z-10">
+      <Header />
+      <div className="absolute top-0 left-0 w-full z-10 pt-16 md:pt-20">
         <div className="h-screen" />
         <MainContent />
       </div>
