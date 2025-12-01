@@ -5,12 +5,11 @@ import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { Newsletter } from "@/components/newsletter"
 import { MainContent } from "@/components/main-content"
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion"
-import { useRef, useState } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
-  const [pointerEventsEnabled, setPointerEventsEnabled] = useState(true)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -18,10 +17,6 @@ export default function Home() {
 
   const heroY = useTransform(scrollYProgress, [0, 0.4, 0.6], [0, -100, -200])
   const heroOpacity = useTransform(scrollYProgress, [0, 0.25, 0.45], [1, 0.5, 0])
-
-  useMotionValueEvent(heroOpacity, "change", (latest) => {
-    setPointerEventsEnabled(latest > 0.3)
-  })
 
   return (
     <div ref={containerRef} className="relative min-h-[200vh] bg-white">
@@ -98,7 +93,6 @@ export default function Home() {
           y: heroY,
           opacity: heroOpacity,
           zIndex: 20,
-          pointerEvents: pointerEventsEnabled ? "auto" : "none",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: heroOpacity }}
