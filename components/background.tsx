@@ -102,7 +102,7 @@ export const Background = ({
   const extension = getFileExtension(src)
   const isVideoFile = isVideo(extension)
 
-  const classNames = "absolute bg-background left-0 top-0 w-full h-full object-cover"
+  const classNames = "absolute bg-background left-0 top-0 w-full h-full object-cover pointer-events-none"
 
   if (isVideoFile) {
     return <VideoWithPlaceholder src={src} className={classNames} placeholder={placeholder} />

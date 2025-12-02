@@ -37,7 +37,7 @@ export const Footer = () => {
   }, [])
 
   return (
-    <div className="flex flex-col gap-4 items-center absolute bottom-[calc(var(--inset)+0.8rem)] md:bottom-[calc(var(--inset)+1.5rem)] left-1/2 -translate-x-1/2">
+    <div className="flex flex-col gap-4 items-center w-full">
       <div className="flex flex-col gap-4 items-center w-full">
         <Link
           target="_blank"

@@ -26,8 +26,8 @@ export default function Home() {
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{ 
-          duration: 1.2,
-          delay: 0.1,
+          duration: 0.8,
+          delay: 0,
           ease: [0.25, 0.46, 0.45, 0.94]
         }}
       >
@@ -59,17 +59,7 @@ export default function Home() {
       </motion.div>
 
       {/* Content that fades in as clouds part */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ 
-          duration: 1,
-          delay: 0.4,
-          ease: [0.25, 0.46, 0.45, 0.94]
-        }}
-        style={{ willChange: 'opacity' }}
-        className="relative z-50"
-      >
+      <div className="relative z-50">
         <Header />
         <div className="absolute top-0 left-0 w-full z-10 pt-16 md:pt-20">
           <div className="h-screen" />
@@ -85,7 +75,7 @@ export default function Home() {
             <MainContent />
           </motion.div>
         </div>
-      </motion.div>
+      </div>
 
       <motion.section
         className="sticky top-0 left-0 w-full h-screen overflow-hidden"
@@ -94,42 +84,25 @@ export default function Home() {
           opacity: heroOpacity,
           zIndex: 20,
         }}
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={{ opacity: heroOpacity }}
-        transition={{ 
-          duration: 1,
-          delay: 0.4,
-          ease: [0.25, 0.46, 0.45, 0.94]
-        }}
       >
-        <motion.div
+        <div
           style={{ opacity: heroOpacity }}
           className="absolute inset-0"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 1,
-            delay: 0.5,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }}
         >
           <Background src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alt-g7Cv2QzqL3k6ey3igjNYkM32d8Fld7.mp4" placeholder="/alt-placeholder.png" />
 
-          <motion.div 
-            className="absolute inset-0"
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.8,
-              delay: 0.7,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }}
-          >
+          <div className="absolute inset-0 pointer-events-auto z-10">
             <Newsletter />
-            <Footer />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </motion.section>
+
+      {/* Footer buttons as top layer */}
+      <div className="fixed bottom-[calc(var(--inset)+0.8rem)] md:bottom-[calc(var(--inset)+1.5rem)] left-1/2 -translate-x-1/2 z-[200] pointer-events-auto">
+        <Footer />
+      </div>
     </div>
   )
 }
