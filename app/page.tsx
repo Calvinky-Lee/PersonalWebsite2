@@ -5,11 +5,12 @@ import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { Newsletter } from "@/components/newsletter"
 import { MainContent } from "@/components/main-content"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
+import { useRef, useState, useEffect } from "react"
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const [isOverWhiteSection, setIsOverWhiteSection] = useState(false)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -17,6 +18,32 @@ export default function Home() {
 
   const heroY = useTransform(scrollYProgress, [0, 0.4, 0.6], [0, -100, -200])
   const heroOpacity = useTransform(scrollYProgress, [0, 0.25, 0.45], [1, 0.5, 0])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const heroHeight = window.innerHeight
+      // Fade out buttons when scrolling into white section (same threshold as header)
+      setIsOverWhiteSection(scrollPosition > heroHeight * 0.8)
+    }
+
+    // Throttle scroll events
+    let timeoutId: NodeJS.Timeout | null = null
+    const throttledHandleScroll = () => {
+      if (timeoutId) return
+      timeoutId = setTimeout(() => {
+        handleScroll()
+        timeoutId = null
+      }, 10)
+    }
+
+    window.addEventListener("scroll", throttledHandleScroll, { passive: true })
+    handleScroll() // Check initial state
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll)
+      if (timeoutId) clearTimeout(timeoutId)
+    }
+  }, [])
 
   return (
     <div ref={containerRef} className="relative min-h-[200vh] bg-white">
@@ -99,10 +126,20 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Footer buttons as top layer */}
-      <div className="fixed bottom-[calc(var(--inset)+0.8rem)] md:bottom-[calc(var(--inset)+1.5rem)] left-1/2 -translate-x-1/2 z-[200] pointer-events-auto">
-        <Footer />
-      </div>
+      {/* Footer buttons as top layer - fade out when in white section */}
+      <AnimatePresence>
+        {!isOverWhiteSection && (
+          <motion.div 
+            className="fixed bottom-[calc(var(--inset)+0.8rem)] md:bottom-[calc(var(--inset)+1.5rem)] left-1/2 -translate-x-1/2 z-[200] pointer-events-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
