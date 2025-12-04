@@ -14,10 +14,10 @@ export const MainContent = () => {
   const [isThri5Expanded, setIsThri5Expanded] = useState(true)
   const [isUWaterlooExpanded, setIsUWaterlooExpanded] = useState(true)
   return (
-    <section className="relative min-h-screen bg-gray-50 text-gray-900 px-6 py-32 md:px-12 lg:px-24">
+    <section className="relative min-h-screen bg-gray-50 text-gray-900 px-6 pt-20 pb-32 md:px-12 lg:px-24">
       <div className="max-w-[90rem] mx-auto space-y-24">
         {/* About Me and Certifications Side by Side */}
-        <div id="about-me" className="flex flex-col lg:flex-row gap-12 items-stretch scroll-mt-24">
+        <div id="about-me" className="flex flex-col lg:flex-row gap-12 items-stretch scroll-mt-24 min-w-0">
           {/* About Me Section */}
           <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,20 +50,20 @@ export const MainContent = () => {
                 </div>
                 <div className="flex-1 min-w-0 space-y-8">
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-serif text-gray-900 mb-5 select-text">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-900 mb-5 select-text break-words">
                       Hi I&apos;m Calvin Lee!
                     </h3>
-                    <p className="text-lg md:text-xl leading-loose text-gray-700 font-serif select-text">
+                    <p className="text-base sm:text-lg md:text-xl leading-loose text-gray-700 font-serif select-text break-words">
                       I&apos;m from Oakville, Ontario and I love to build cool things!
                     </p>
                   </div>
                   <div className="pt-3 border-l-2 border-gray-300 pl-4">
-                    <p className="text-lg md:text-xl leading-loose text-gray-700 font-serif select-text">
+                    <p className="text-base sm:text-lg md:text-xl leading-loose text-gray-700 font-serif select-text break-words">
                       Outside of school I enjoy playing the Violin, Watching Hockey and playing Baseball.
                     </p>
                   </div>
                   <div className="pt-3">
-                    <p className="text-lg md:text-xl leading-loose text-gray-600 font-serif select-text">
+                    <p className="text-base sm:text-lg md:text-xl leading-loose text-gray-600 font-serif select-text break-words">
                       Feel free to explore my website!
                     </p>
                   </div>
@@ -73,53 +73,59 @@ export const MainContent = () => {
           </motion.div>
 
           {/* Certifications Section */}
-          <div className="flex-1 h-full flex flex-col">
+          <div className="flex-1 h-full flex flex-col min-w-0">
             <h2 className="text-3xl md:text-4xl font-serif text-center mb-8">Certifications</h2>
             <div className="space-y-8 flex-1 flex flex-col justify-start">
-              <div className="p-8 md:p-10 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow flex gap-6 items-start">
-                <div className="flex-shrink-0">
+              <div className="p-4 md:p-8 lg:p-10 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow flex flex-col sm:flex-row gap-4 sm:gap-6 items-start min-w-0">
+                <div className="flex-shrink-0 self-center sm:self-start">
                   <Image
                     src={snowflakeImage}
                     alt="Snowflake Certification"
                     width={80}
                     height={80}
-                    className="rounded-lg object-contain"
+                    className="rounded-lg object-contain w-16 h-16 sm:w-20 sm:h-20"
                   />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-2">Master Modern SQL with Snowflake</h3>
-                  <p className="text-gray-600 mb-4">Udemy · 2025</p>
-                  <Link
-                    href="https://www.udemy.com/certificate/UC-38e57053-c2d1-4a89-9d9c-fa996c070005/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-5 py-4 border border-gray-300 rounded-lg font-sans text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all tracking-wide"
-                  >
-                    View Certificate →
-                  </Link>
+                <div className="flex-1 min-w-0 w-full overflow-hidden">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 break-words">Master Modern SQL with Snowflake</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 whitespace-nowrap">Udemy · 2025</p>
+                  <div className="flex flex-wrap gap-2">
+                    <Link
+                      href="https://www.udemy.com/certificate/UC-38e57053-c2d1-4a89-9d9c-fa996c070005/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-1.5 px-4 py-3 sm:px-5 sm:py-4 text-sm sm:text-base border border-gray-300 rounded-lg font-sans text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all tracking-wide whitespace-nowrap"
+                    >
+                      View Certificate
+                      <span>→</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className="p-8 md:p-10 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow flex gap-6 items-start">
-                <div className="flex-shrink-0">
+              <div className="p-4 md:p-8 lg:p-10 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow flex flex-col sm:flex-row gap-4 sm:gap-6 items-start min-w-0">
+                <div className="flex-shrink-0 self-center sm:self-start">
                   <Image
                     src={udemyImage}
                     alt="Full-Stack Bootcamp Certification"
                     width={80}
                     height={80}
-                    className="rounded-lg object-contain"
+                    className="rounded-lg object-contain w-16 h-16 sm:w-20 sm:h-20"
                   />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-2">The Complete Full-Stack Web Development Bootcamp</h3>
-                  <p className="text-gray-600 mb-4">Udemy · 2024</p>
-                  <Link
-                    href="https://www.udemy.com/certificate/UC-73323ebb-c0e1-4e73-b73f-2274f1cc2924/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-5 py-4 border border-gray-300 rounded-lg font-sans text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all tracking-wide"
-                  >
-                    View Certificate →
-                  </Link>
+                <div className="flex-1 min-w-0 w-full overflow-hidden">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 break-words">The Complete Full-Stack Web Development Bootcamp</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 whitespace-nowrap">Udemy · 2024</p>
+                  <div className="flex flex-wrap gap-2">
+                    <Link
+                      href="https://www.udemy.com/certificate/UC-73323ebb-c0e1-4e73-b73f-2274f1cc2924/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-1.5 px-4 py-3 sm:px-5 sm:py-4 text-sm sm:text-base border border-gray-300 rounded-lg font-sans text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all tracking-wide whitespace-nowrap"
+                    >
+                      View Certificate
+                      <span>→</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

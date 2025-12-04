@@ -323,15 +323,7 @@ export const Header = () => {
           </nav>
 
           {/* Right: Social Buttons */}
-          <AnimatePresence>
-            {isOverWhiteSection && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
-                className="flex items-center gap-3 ml-auto"
-              >
+          <div className="flex items-center gap-3 ml-auto">
             <Link
               target="_blank"
               href={socialLinks.resume}
@@ -409,9 +401,7 @@ export const Header = () => {
                 isOverWhiteSection ? "text-gray-700" : "text-white"
               }`} />
             </Link>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          </div>
         </div>
       </div>
     </header>
