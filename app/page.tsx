@@ -115,7 +115,7 @@ export default function Home() {
         animate={{ opacity: heroOpacity }}
       >
         <div
-          style={{ opacity: heroOpacity }}
+          style={{ opacity: heroOpacity, pointerEvents: 'auto' }}
           className="absolute inset-0"
         >
           <Background src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alt-g7Cv2QzqL3k6ey3igjNYkM32d8Fld7.mp4" placeholder="/alt-placeholder.png" />

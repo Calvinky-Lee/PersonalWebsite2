@@ -43,15 +43,15 @@ export const Newsletter = () => {
   }, [])
 
   return (
-    <div className="flex overflow-hidden relative flex-col gap-4 justify-center items-center pt-10 w-full h-full short:lg:pt-10 pb-footer-safe-area 2xl:pt-footer-safe-area px-sides short:lg:gap-4 lg:gap-8">
-      <div className="flex flex-col items-center gap-2">
+    <div className="flex overflow-hidden relative flex-col gap-4 justify-center items-center pt-10 w-full h-full short:lg:pt-10 pb-footer-safe-area 2xl:pt-footer-safe-area px-sides short:lg:gap-4 lg:gap-8" style={{ pointerEvents: 'auto' }}>
+      <div className="flex flex-col items-center gap-2" style={{ pointerEvents: 'auto' }}>
         <motion.div layout="position" transition={{ duration: DURATION, ease: EASE_OUT }}>
           <h1 className="font-serif text-[9rem] font-black tracking-wider short:lg:text-[12rem] sm:text-[12rem] lg:text-[16rem] text-foreground drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] leading-none">
             Calvin Lee
           </h1>
         </motion.div>
 
-        <motion.p
+        <motion.div
           initial={isInitialRender.current ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{
@@ -64,22 +64,10 @@ export const Newsletter = () => {
             delay: DELAY,
           }}
           className="text-xl short:lg:text-2xl sm:text-2xl lg:text-3xl !leading-[1.3] font-semibold text-center text-foreground text-pretty tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
+          style={{ pointerEvents: 'auto' }}
         >
-          Computer Science{" "}
-          <a
-            href="https://uwaterloo.ca/future-students/programs/computer-science"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
-          >
-            @UWaterloo
-            <img
-              src="/uwaterloo-seal.svg"
-              alt="UWaterloo"
-              className="inline-block w-5 h-5 lg:w-6 lg:h-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]"
-            />
-          </a>
-        </motion.p>
+          Computer Science
+        </motion.div>
       </div>
 
       <div className="flex flex-col items-center min-h-0 shrink">
