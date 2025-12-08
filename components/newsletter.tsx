@@ -66,7 +66,24 @@ export const Newsletter = () => {
           className="text-xl short:lg:text-2xl sm:text-2xl lg:text-3xl !leading-[1.3] font-semibold text-center text-foreground text-pretty tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
           style={{ pointerEvents: 'auto' }}
         >
-          Computer Science
+          Computer Science{" "}
+          <a
+            href="https://cs.uwaterloo.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] relative z-[100] cursor-pointer no-underline"
+            style={{ pointerEvents: 'auto', position: 'relative', zIndex: 1000 }}
+            onClick={(e) => {
+              e.stopPropagation()
+            }}
+          >
+            @UWaterloo
+            <img
+              src="/uwaterloo-seal.svg"
+              alt="UWaterloo"
+              className="inline-block w-5 h-5 lg:w-6 lg:h-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] pointer-events-none"
+            />
+          </a>
         </motion.div>
       </div>
 
