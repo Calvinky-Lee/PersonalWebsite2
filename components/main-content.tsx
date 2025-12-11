@@ -307,6 +307,10 @@ export const MainContent = () => {
                                   <span className="text-gray-400 flex-shrink-0">•</span>
                                   <span>TC Energy STEM Scholarship</span>
                                 </li>
+                                <li className="flex gap-2">
+                                  <span className="text-gray-400 flex-shrink-0">•</span>
+                                  <span>Belairdirect Scholarship</span>
+                                </li>
                               </ul>
                             </div>
                           </motion.div>
